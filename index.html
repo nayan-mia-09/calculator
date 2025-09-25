@@ -3,37 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator 1</title>
+    <title>ZenCalc</title>
+    <!-- Fav Icon link -->
+     <link rel="shortcut icon" href="assets/image.png" type="image/x-icon">
+    <!-- Main CSS -->
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class="calculator">
-        <input type="text" class="display" disabled>
+        <div class="inner-box">
+            <input type="text" id="display" disabled>
+            <span id="operator"></span>
+        </div>
+        
         <div class="buttons">
-            <button> 7 </button>
-            <button> 8 </button>
-            <button> 9 </button>
-            <button> / </button>
+            <button onclick="apendNumber('7')"> 7 </button>
+            <button onclick="apendNumber('8')"> 8 </button>
+            <button onclick="apendNumber('9')"> 9 </button>
+            <button onclick="setOperator('/')"> / </button>
 
-            <button> 4 </button>
-            <button> 5 </button>
-            <button> 6 </button>
-            <button> * </button>
+            <button onclick="apendNumber('4')"> 4 </button>
+            <button onclick="apendNumber('5')"> 5 </button>
+            <button onclick="apendNumber('6')"> 6 </button>
+            <button onclick="setOperator('*')"> * </button>
 
-            <button> 1 </button>
-            <button> 2 </button>
-            <button> 3 </button>
-            <button> - </button>
+            <button onclick="apendNumber('1')"> 1 </button>
+            <button onclick="apendNumber('2')"> 2 </button>
+            <button onclick="apendNumber('3')"> 3 </button>
+            <button onclick="setOperator('-')"> - </button>
 
-            <button> 0 </button>
-            <button class="equal"> = </button>
-            <button> . </button>
-            <button> + </button>
+            <button onclick="apendNumber('0')"> 0 </button>
+            <button class="equal" onclick="calculate()"> = </button>
+            <button onclick="apendNumber('.')"> . </button>
+            <button onclick="setOperator('+')"> + </button>
 
-            <button class="clear">C</button>
+            <button class="clear" onclick="clearInput()">C</button>
 
         </div>
 
     </div>
+
+    <!-- Main JS -->
+    <script src="index.js"></script>
 </body>
 </html>
